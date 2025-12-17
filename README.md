@@ -6,7 +6,7 @@
 backend-stock/
 ├── node_modules/       # (Se crea solo al instalar librerías)
 ├── src/
-│   ├── config/         # Aquí va la conexión a la DB (antes hacías esto en sequelize config)
+│   ├── config/         # Aquí va la conexión a la DB
 │   ├── controllers/    # La LÓGICA. Aquí "desarmamos" el JSON y decidimos qué hacer.
 │   ├── models/         # Los ESQUEMAS. Aquí definimos qué campos tiene un Producto.
 │   ├── routes/         # Las RUTAS. Define las URLs (GET /productos, POST /ventas).
@@ -44,3 +44,10 @@ En la terminal, dentro de la carpeta `backend-stock`, ejecutaremos:
    npm install --save-dev nodemon
    ```
    **nodemon**: es una herramienta que reinicia automáticamente el servidor cada vez que detecta cambios en el código fuente, lo que facilita el desarrollo.
+
+## 2 - Configuración del Archivo .env
+Creamos un archivo `.env` en la raíz del proyecto para almacenar variables de entorno sensibles, como la configuración de la base de datos y el puerto del servidor.
+```env
+PORT=3000
+DB_STORAGE=./database.sqlite
+```
